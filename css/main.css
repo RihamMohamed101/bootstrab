@@ -1,0 +1,291 @@
+:root {
+    --main-color: #0078FF ;
+    --main-dur : .5s;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.offcanvas.offcanvas-end {
+    top: 10px ;
+    right: 2%;
+    width: 95%; 
+}
+
+
+.dropend .dropdown-menu[data-bs-popper] {
+    top: -50px;
+    left: -165px;
+}
+
+.offcanvas-header {
+
+    background: rgb(0 ,0 , 0 , 50%);
+    justify-content: flex-end;
+
+}
+
+.offcanvas-header .btn-close {
+    margin: 0 !important;
+}
+
+.btn-close:focus , .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.btn-close {
+   opacity: 1 !important;
+    color: #fff !important;
+    background-image: none;
+}
+
+
+
+@media (max-width:991px) {
+    .dropend .dropdown-toggle::after  {
+        transform: rotate(90deg);
+    }
+
+nav .active:hover  {
+    color: var(--main-color) !important;
+}
+
+   
+}
+
+.nav-link {
+    text-transform: uppercase;
+}
+
+@media (min-width:991px) {
+    .nav-link {
+            color: #fff !important;
+        }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 1.5rem;
+    }
+}
+
+ nav  .active {
+    position: relative;
+    overflow: hidden;
+}
+
+nav .active::after {
+    content: "";
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: -1000px;
+    bottom: 0;
+    transition: var(--main-dur);
+}
+
+nav .active:hover::after
+{
+    left: 0;
+}
+
+.dropdown-menu a {
+    transition: var(--main-dur);
+
+}
+
+.dropdown-menu a:hover  {
+    color: var(--main-color) !important;
+    background: none !important;
+}
+
+.head {
+    background-image: url(../image/hero-bg.jpg);
+    background-size: cover;
+    background-position: center; 
+    position: relative;
+    z-index: 1;
+}
+
+.head::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(0 ,0 , 0 , 50%);
+    z-index: -1;
+}
+
+.head h2 {
+    font-size: 4rem;
+}
+
+.about .container .cont h3 {
+    position: relative;
+    width: fit-content;
+}
+
+.about .container .cont h3::before{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.title p::after {
+    content: "";
+    width: 40px;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+.icon {
+    border: 8px solid var(--main-color);
+    transition: var(--main-dur);
+    cursor: pointer;
+}
+
+.icon:hover , .contact .contact-social .one:hover  {
+    background-color: var(--main-color);
+    color: #fff !important;
+    border: 8px solid #CDE1F8;
+}
+
+.dtail {
+    background: url(../image/counters-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.dtail::after , .oponion::after , .contact::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 120, 255 , 70%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.work img {
+    transition: var(--main-dur);
+}
+
+.work .image:hover img {
+    transform: scale(1.1);
+}
+
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-indicators {
+    position: static;
+}
+
+.active::after {
+    width: 0;
+}
+
+.oponion , .contact  {
+    background: url(../image/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.blog .a-one h4 {
+    transition: var(--main-dur);
+}
+
+.blog .a-one:hover h4 {
+    color: var(--main-color);
+}
+
+.add {
+    position: relative;
+}
+
+.add::before {
+    content: attr(data-cont);
+    padding: 7px 10px ;
+    color: #fff;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+
+.contact h2 {
+    position: relative;
+}
+
+.contact h2::after {
+    content: "";
+    width: 100px;
+    height: 3px ;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.contact .cont-info  i {
+    color: var(--main-color);
+    width: 30px;
+}
+
+.contact .contact-social .one {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 7px;
+    border: 2px solid var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--main-dur);
+}
+
+footer {
+    background-color: #0062D3;
+    color: #fff;
+}
+
+.bott  {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 1000;
+}
